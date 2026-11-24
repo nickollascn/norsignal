@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>NorSignal App · Interaktiv prototype</title>
+  <meta name="description" content="Interaktiv app-prototype for NorSignal – branchespecifik cyber threat intelligence på dansk for nordiske virksomheder." />
+  <link rel="icon" type="image/png" href="../assets/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="stage">
+    <!-- Desktop presentation sidebar (hidden automatically on real phones) -->
+    <aside class="intro" aria-label="Præsentation af app-prototype">
+      <img class="logo" src="../assets/logo-wordmark.png" alt="NorSignal" />
+      <div class="eyebrow">Interaktiv prototype · Kundeapp</div>
+      <h1>Trusselsbilledet i lommen</h1>
+      <p class="lead">Klik direkte i telefonen for at udforske kundeoplevelsen hos Fjordvind Energi A/S (Energi og forsyning · Enterprise-licens).</p>
+
+      <div class="now" id="stage-now" aria-live="polite">
+        <div class="eyebrow" id="now-tag">Skærm 1 af 6</div>
+        <h3 id="now-title">Overblik og trusselsniveau</h3>
+        <p id="now-desc">Samlet vurdering for branchen, udvikling pr. kategori, seneste alerts og direkte adgang til månedens rapport.</p>
+      </div>
+
+      <div class="jump" id="stage-jump" aria-label="Genveje til skærme">
+        <button type="button" data-jump="home" class="on">Overblik</button>
+        <button type="button" data-jump="alerts">Alerts</button>
+        <button type="button" data-jump="reports">Månedsrapport</button>
+        <button type="button" data-jump="exposure">Eksponering</button>
+        <button type="button" data-jump="analyst">Analytiker</button>
+        <button type="button" data-jump="profile">Konto</button>
+        <button type="button" data-jump="login">Log ind</button>
+        <button type="button" id="btn-sim-push">Simuler push-alert</button>
+      </div>
+
+      <a class="back" href="../website/index.html">← Tilbage til hjemmesiden</a>
+      <p class="note">Koncept-mock-up til universitetsprojekt · Alle hændelser, domæner og navne er fiktive.</p>
+    </aside>
+
+    <!-- Phone frame -->
+    <main class="phone" aria-label="NorSignal mobilapp">
+      <div class="screen" id="screen">
+        <div class="island" aria-hidden="true"></div>
+
+        <!-- iOS status bar -->
+        <div class="statusbar" id="statusbar" aria-hidden="true">
+          <span>09:41</span>
+          <div class="icons">
+            <!-- Signal -->
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor">
+              <rect x="0" y="7" width="3" height="5" rx="0.8" />
+              <rect x="4.5" y="5" width="3" height="7" rx="0.8" />
+              <rect x="9" y="2.5" width="3" height="9.5" rx="0.8" />
+              <rect x="13.5" y="0" width="3" height="12" rx="0.8" />
+            </svg>
+            <!-- Wi-Fi -->
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <path d="M1.5 4.2C5.1 1.2 10.9 1.2 14.5 4.2" />
+              <path d="M4.2 7C6.4 5.2 9.6 5.2 11.8 7" />
+              <circle cx="8" cy="10.2" r="1.1" fill="currentColor" stroke="none" />
+            </svg>
+            <!-- Battery -->
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+              <rect x="0.75" y="0.75" width="20.5" height="10.5" rx="2.6" stroke="currentColor" stroke-width="1.2" opacity="0.55" />
+              <rect x="2.5" y="2.5" width="16" height="7" rx="1.4" fill="currentColor" />
+              <path d="M22.8 4v4a1.4 1.4 0 0 0 0-4Z" fill="currentColor" opacity="0.55" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Simulated push notification -->
+        <button type="button" class="push" id="push-banner" aria-label="Kritisk alert fra NorSignal">
+          <img src="../assets/logo-icon.png" alt="" />
+          <div>
+            <div class="h"><span>NorSignal · Energi-desk</span><span>nu</span></div>
+            <b id="push-title">Kritisk sårbarhed i SSL-VPN</b>
+            <p id="push-body">CVE-2026-2148 udnyttes aktivt mod nordisk infrastruktur. Tryk for vurdering og tiltag.</p>
+          </div>
+        </button>
+
+        <!-- Active screen view mount -->
+        <div id="view-root"></div>
+
+        <!-- Chat composer (only visible on Analytiker tab) -->
+        <form class="composer" id="composer" hidden>
+          <input type="text" id="chat-input" placeholder="Skriv til Energi-desk..." autocomplete="off" aria-label="Besked til analytiker" />
+          <button type="submit" aria-label="Send besked">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <path d="M22 2L11 13" />
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+            </svg>
+          </button>
+        </form>
+
+        <!-- Bottom tab bar -->
+        <nav class="tabbar" id="tabbar" aria-label="App-navigation">
+          <button type="button" data-tab="home" class="on">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+            </svg>
+            <span>Overblik</span>
+          </button>
+          <button type="button" data-tab="alerts">
+            <span class="badge" id="badge-alerts">3</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+            <span>Alerts</span>
+          </button>
+          <button type="button" data-tab="reports">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6M8 13h8M8 17h5" />
+            </svg>
+            <span>Rapporter</span>
+          </button>
+          <button type="button" data-tab="exposure">
+            <span class="badge" id="badge-exposure">3</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M12 8v4M12 16h.01" />
+            </svg>
+            <span>Eksponering</span>
+          </button>
+          <button type="button" data-tab="analyst">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            <span>Analytiker</span>
+          </button>
+        </nav>
+
+        <!-- Toast feedback -->
+        <div class="toast" id="toast" role="status" aria-live="polite">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span id="toast-text"></span>
+        </div>
+
+        <div class="home-ind" id="home-ind" aria-hidden="true"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

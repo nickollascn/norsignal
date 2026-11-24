@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorSignal · Branchespecifik cyber threat intelligence for nordiske virksomheder</title>
+  <meta name="description" content="NorSignal leverer branchespecifik cyber threat intelligence på dansk til nordiske virksomheder: månedlige analyser, live dashboard og overvågning af jeres eksponering – klar til ledelse og NIS2." />
+  <link rel="icon" type="image/png" href="../assets/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reusable signal motif -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="signal" viewBox="0 0 100 100">
+        <circle cx="20" cy="80" r="10" fill="#EB0510" />
+        <path d="M20 47 A33 33 0 0 1 53 80" fill="none" stroke="#EB0510" stroke-width="13" />
+        <path d="M20 18 A62 62 0 0 1 82 80" fill="none" stroke="#EB0510" stroke-width="13" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <nav class="container nav" aria-label="Hovedmenu">
+      <a href="#top" class="nav-logo" aria-label="NorSignal forside">
+        <img src="../assets/logo-wordmark.png" alt="NorSignal" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#loesninger">Løsninger</a></li>
+        <li><a href="#brancher">Brancher</a></li>
+        <li><a href="#priser">Priser</a></li>
+        <li><a href="#indsigt">Indsigt</a></li>
+        <li><a href="#om-os">Om os</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../app/index.html" class="login">Log ind</a>
+        <a href="#demo" class="btn btn-dark">Book en demo</a>
+      </div>
+      <button class="nav-toggle" aria-label="Åbn menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Cyber threat intelligence · på dansk</span>
+          <h1>Kend jeres trusselsbillede, før angriberne <em>udnytter det</em></h1>
+          <p class="lead">NorSignal leverer branchespecifik cyber threat intelligence på dansk til nordiske virksomheder: månedlige analyser, live dashboard og overvågning af jeres eksponering – klar til ledelse og NIS2-dokumentation.</p>
+          <div class="hero-actions">
+            <a href="#demo" class="btn btn-red">Book en demo</a>
+            <a href="#indsigt" class="link-underline">Download Trusselsbillede Danmark</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>15 min</strong><span>fra rapport til beslutningsgrundlag</span></div>
+            <div><strong>4</strong><span>dedikerede branche-desks</span></div>
+            <div><strong>100 %</strong><span>EU-hostet kundedata</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="qc qc-lav"></div>
+          <div class="qc qc-aub"></div>
+          <div class="qc qc-red"></div>
+          <svg class="signal" viewBox="0 0 100 100">
+            <circle cx="20" cy="80" r="10" fill="#EB0510" />
+            <path class="arc" d="M20 47 A33 33 0 0 1 53 80" stroke-width="13" />
+            <path class="arc a2" d="M20 18 A62 62 0 0 1 82 80" stroke-width="13" />
+          </svg>
+          <div class="report-card">
+            <h4>Trusselsbillede: Energi og forsyning</h4>
+            <div class="sub">Danmark · November 2026 · <span class="tlp">TLP:AMBER</span></div>
+            <div class="cat-title">TRUSSELSNIVEAU PR. KATEGORI</div>
+            <div class="bar-row"><span>Ransomware</span><div class="bar"><i data-w="78"></i></div></div>
+            <div class="bar-row"><span>Hacktivisme / DDoS</span><div class="bar"><i data-w="62"></i></div></div>
+            <div class="bar-row"><span>Spionage</span><div class="bar"><i class="red" data-w="90"></i></div></div>
+            <div class="bar-row"><span>Svindel / phishing</span><div class="bar"><i class="lav" data-w="45"></i></div></div>
+            <div class="foot"><span>Illustrativ mock-up</span><span>Kilde: NorSignal Energi-desk</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <div class="trust">
+      <div class="container">
+        <div class="trust-item"><span class="dot red"></span><b>Et Norlys-selskab</b></div>
+        <div class="trust-item"><span class="dot"></span><b>EU-hosting</b> &amp; GDPR</div>
+        <div class="trust-item"><span class="dot"></span>Kildevurdering efter <b>Admiralty-skalaen</b></div>
+        <div class="trust-item"><span class="dot"></span>Understøtter <b>NIS2</b>-dokumentation</div>
+        <div class="trust-item"><span class="dot"></span><b>ISO 27001</b> i 2028</div>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem">
+      <span class="section-num">01</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Udfordringen</span>
+          <h2>Truslen er høj. Overblikket er dyrt og skrevet til nogen andre.</h2>
+          <p>Mellemstore virksomheder har et lille sikkerhedsteam og en SOC eller MDR-leverandør – men ingen CTI-funktion. Alligevel skal ledelsen forstå og godkende organisationens cyberrisici.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat dark reveal">
+            <strong>MEGET HØJ</strong>
+            <p>CFCS vurderer truslen fra cyberspionage mod Danmark som meget høj.</p>
+          </div>
+          <div class="stat reveal">
+            <strong>~6.000</strong>
+            <p>danske virksomheder anslås omfattet af NIS2, der kræver dokumenteret risikostyring.</p>
+            <p class="src">Uofficielt estimat</p>
+          </div>
+          <div class="stat reveal">
+            <strong>60.000 €</strong>
+            <p>koster enterprise-CTI typisk om året – og forudsætter et internt CTI-team.</p>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="panel lav reveal">
+            <h3>Problemet</h3>
+            <ul class="ticks">
+              <li>Globale feeds er generiske og engelsksprogede</li>
+              <li>Enterprise-platforme kræver analytikere til at omsætte data</li>
+              <li>NIS2 (i kraft 1. juli 2025) kræver dokumenteret risikostyring</li>
+              <li>Ledelsen får tekniske statusrapporter – ikke beslutningsgrundlag</li>
+            </ul>
+          </div>
+          <div class="panel dark reveal">
+            <h3>Vores løsning</h3>
+            <ul class="ticks">
+              <li>Branchedashboard med trusselsaktører, ransomware-ofre og sårbarheder</li>
+              <li>Månedlig rapport på jeres sprog – beslutningsgrundlag på 15 minutter</li>
+              <li>Overvågning af lækkede credentials, domæner og brand-misbrug</li>
+              <li>Fra 95.000 kr. om året, uden krav om eget CTI-team</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PILLARS ============ -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="badge">B</div>
+            <h3>Branchespecifikt</h3>
+            <p>Dedikerede branche-desks for energi, tele, industri og IT. Analyser målrettet jeres branche og region – ikke generiske globale feeds.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="badge">P</div>
+            <h3>Prisvenligt</h3>
+            <p>Enterprise-kvalitet fra 95.000 kr. pr. år – markant under globale platforme, og uden at ansætte et internt CTI-team.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="badge">S</div>
+            <h3>Sikkert</h3>
+            <p>Alle kundedata hostes i EU. Etisk indsamling, GDPR og ISO 27001-certificering i 2028.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="badge">N</div>
+            <h3>Skalerbart</h3>
+            <p>Fra Danmark til hele Norden. Lokale analytikere og nordiske sprog fra 2029.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTION ============ -->
+    <section class="section dark-section" id="loesninger">
+      <span class="section-num">02</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow light">Løsninger</span>
+          <h2>Én licens samler platform, rapport og analytikeradgang</h2>
+          <p>Vi køber rådata, automatiserer berigelsen med AI – og lægger værdien i analysen. Vores branche-desks vurderer relevans og sandsynlighed, så I får prioriterede anbefalinger.</p>
+        </div>
+
+        <div class="product-grid">
+          <div class="feature-list" role="tablist">
+            <div class="feature active" data-pane="dash" role="tab" tabindex="0">
+              <span class="num">01</span>
+              <div><h3>Live branchedashboard</h3><p>Trusselsaktører, kampagner, ransomware-ofre og aktivt udnyttede sårbarheder i jeres branche – opdateret løbende.</p></div>
+            </div>
+            <div class="feature" data-pane="report" role="tab" tabindex="0">
+              <span class="num">02</span>
+              <div><h3>Månedlig analytikerrapport</h3><p>Ledelsesresumé og anbefalinger på dansk. Kan indgå direkte i jeres NIS2-dokumentation.</p></div>
+            </div>
+            <div class="feature" data-pane="expo" role="tab" tabindex="0">
+              <span class="num">03</span>
+              <div><h3>Overvågning af eksponering</h3><p>Lækkede credentials, nye lookalike-domæner og omtale af jer på dark web og i kriminelle fora.</p></div>
+            </div>
+            <div class="feature" data-pane="analyst" role="tab" tabindex="0">
+              <span class="num">04</span>
+              <div><h3>Adgang til analytikere</h3><p>Navngiven analytikerkontakt, RFI'er og kvartalsvise briefinger. Alerts via e-mail, Teams og app.</p></div>
+            </div>
+          </div>
+
+          <div class="mock reveal" aria-label="Illustration af NorSignal-portalen">
+            <div class="mock-bar"><i></i><i></i><i></i><span>portal.norsignal.dk</span></div>
+            <div class="mock-body">
+              <aside class="mock-side">
+                <img src="../assets/logo-wordmark-white.png" alt="" />
+                <a href="#" class="on" data-pane="dash">Overblik</a>
+                <a href="#" data-pane="report">Rapporter</a>
+                <a href="#" data-pane="expo">Eksponering</a>
+                <a href="#" data-pane="analyst">Analytiker</a>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-pane on" id="pane-dash">
+                  <div class="mock-title">God morgen, Fjordvind Energi</div>
+                  <div class="mock-sub">Energi og forsyning · Danmark · Opdateret 08:14</div>
+                  <div class="mini-grid">
+                    <div class="mini alert"><b>Forhøjet</b><span>Samlet trusselsniveau</span></div>
+                    <div class="mini"><b>7</b><span>Nye alerts denne uge</span></div>
+                    <div class="mini"><b>3</b><span>Sårbarheder i jeres stack</span></div>
+                  </div>
+                  <div class="m-list">
+                    <div class="m-item"><span class="sev crit"></span><div>Aktivt udnyttet sårbarhed i SSL-VPN-gateways<small>Sårbarhed · Admiralty B2</small></div><em>i dag</em></div>
+                    <div class="m-item"><span class="sev high"></span><div>Hacktivister annoncerer DDoS mod nordisk forsyning<small>Kampagne · Admiralty C3</small></div><em>i går</em></div>
+                    <div class="m-item"><span class="sev high"></span><div>Ransomware-gruppe lægger europæisk energiselskab op<small>Ransomware · Admiralty B2</small></div><em>2 d</em></div>
+                    <div class="m-item"><span class="sev med"></span><div>Phishing med falske måleraflæsnings-mails<small>Svindel · Admiralty B3</small></div><em>3 d</em></div>
+                  </div>
+                </div>
+                <div class="mock-pane" id="pane-report">
+                  <div class="mock-title">Månedlig rapport · November 2026</div>
+                  <div class="mock-sub">Læsetid ca. 15 min · <span class="tlp">TLP:AMBER</span></div>
+                  <div class="report-doc">
+                    <h5>Ledelsesresumé</h5>
+                    <p>Vores vurdering er, at sandsynligheden for ransomware mod branchen er høj i 4. kvartal. Vi anbefaler, at ledelsen prioriterer følgende tre tiltag.</p>
+                    <div style="margin-top:12px">
+                      <div class="rd-sec"><b>1</b>Ledelsesresumé</div>
+                      <div class="rd-sec"><b>2</b>Trusselsaktører og kampagner</div>
+                      <div class="rd-sec"><b>3</b>Ransomware og lækager</div>
+                      <div class="rd-sec"><b>4</b>Prioriterede sårbarheder</div>
+                      <div class="rd-sec"><b>5</b>Geopolitik og regulering</div>
+                      <div class="rd-sec"><b class="r">6</b>Jeres eksponering</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-pane" id="pane-expo">
+                  <div class="mock-title">Jeres eksponering</div>
+                  <div class="mock-sub">Overvåger fjordvind.dk og 3 relaterede domæner</div>
+                  <div class="m-list">
+                    <div class="m-item"><span class="sev crit"></span><div><span class="cred">m.h****@fjordvind.dk</span><small>Credential i infostealer-log</small></div><span class="pill new">NY</span></div>
+                    <div class="m-item"><span class="sev high"></span><div><span class="cred">fjordvind-energi.com</span><small>Lookalike-domæne registreret</small></div><span class="pill new">NY</span></div>
+                    <div class="m-item"><span class="sev med"></span><div><span class="cred">j.s****@fjordvind.dk</span><small>Gammel lækage (2023)</small></div><span class="pill ok">HÅNDTERET</span></div>
+                    <div class="m-item"><span class="sev"></span><div>Omtale i russisksproget forum<small>Brand · lav relevans</small></div><span class="pill ok">VURDERET</span></div>
+                  </div>
+                </div>
+                <div class="mock-pane" id="pane-analyst">
+                  <div class="mock-title">Jeres analytiker · Energi-desk</div>
+                  <div class="mock-sub">4 af 12 RFI'er brugt i 2026</div>
+                  <div class="chat">
+                    <div class="bubble me">Er DDoS-kampagnen også rettet mod mindre fjernvarmeselskaber?<small>Jer · 09:02</small></div>
+                    <div class="bubble">Ja. Vi har set tre nordiske fjernvarmeselskaber på gruppens mållister siden oktober. Vi vurderer sandsynligheden for et angreb mod jer som moderat. Jeg sender en kort briefing inden kl. 12.<small>CTI-analytiker · 09:17</small></div>
+                    <div class="bubble me">Tak. Kan briefingen deles med direktionen?<small>Jer · 09:19</small></div>
+                    <div class="bubble">Ja – den mærkes TLP:GREEN, så den kan deles internt.<small>CTI-analytiker · 09:21</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="saadan">
+      <span class="section-num">03</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Sådan virker det</span>
+          <h2>Fra rådata til beslutninger – i fire trin</h2>
+          <p>Vi køber data, bygger på åbne standarder og udvikler kun det, der differentierer: branche- og landeklassifikation, AI-assisteret rapportering på jeres sprog og en kundeportal med eksponeringsmotor.</p>
+        </div>
+        <div class="pipeline">
+          <div class="step reveal">
+            <div class="step-head">1. Indsamling</div>
+            <ul><li>Licenserede feeds (dark web, malware, sårbarheder)</li><li>OSINT og nyheder</li><li>CFCS, ENISA og branche-ISAC'er</li><li>Telemetri fra MSSP-partnere</li></ul>
+          </div>
+          <div class="step reveal">
+            <div class="step-head">2. Berigelse</div>
+            <ul><li>Normalisering i OpenCTI/MISP</li><li>AI-klassifikation efter branche, land og aktør</li><li>Oversættelse og resumé på jeres sprog</li><li>Filtrering af støj</li></ul>
+          </div>
+          <div class="step reveal">
+            <div class="step-head">3. Analyse</div>
+            <ul><li>Branche-desks med erfarne analytikere</li><li>Vurdering af relevans og sandsynlighed</li><li>Prioriterede anbefalinger</li><li>Kvalitetssikring</li></ul>
+          </div>
+          <div class="step reveal">
+            <div class="step-head">4. Levering</div>
+            <ul><li>Portal, app og branchedashboard</li><li>Månedlig rapport (PDF + web)</li><li>Alerts via e-mail, Teams og push</li><li>API og STIX/TAXII til SIEM</li></ul>
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact reveal"><span class="eyebrow">EU-hosting</span><p>Alle kundedata i EU</p></div>
+          <div class="fact reveal"><span class="eyebrow">ISO 27001</span><p>Certificering i 2028</p></div>
+          <div class="fact reveal"><span class="eyebrow">Juridisk ramme</span><p>Etisk indsamling, GDPR</p></div>
+          <div class="fact reveal"><span class="eyebrow">Kildekvalitet</span><p>Admiralty-skala på alle vurderinger</p></div>
+          <div class="fact reveal"><span class="eyebrow">Standarder</span><p>STIX/TAXII, MITRE ATT&amp;CK</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDUSTRIES ============ -->
+    <section class="section" id="brancher" style="background:#fff">
+      <span class="section-num">04</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Brancher</span>
+          <h2>Fire analyseområder – og et koncernoverblik</h2>
+          <p>Truslen mod et forsyningsselskab ligner ikke truslen mod en softwarevirksomhed. Derfor har hver branche sin egen desk med analytikere, der kender jeres teknologi, leverandører og modstandere.</p>
+        </div>
+        <div class="ind-grid">
+          <div class="ind reveal">
+            <div class="badge">E</div>
+            <h3>Energi og forsyning</h3>
+            <p>Kritisk infrastruktur med OT-miljøer og stor geopolitisk opmærksomhed.</p>
+            <div class="threats"><span>Statsaktører</span><span>OT-angreb</span><span>Hacktivisme</span></div>
+          </div>
+          <div class="ind reveal">
+            <div class="badge">T</div>
+            <h3>Tele og digital infrastruktur</h3>
+            <p>Net, datacentre og kunder – et attraktivt mål for både spionage og afpresning.</p>
+            <div class="threats"><span>Statsaktører</span><span>DDoS</span><span>Angreb på net og kunder</span></div>
+          </div>
+          <div class="ind reveal">
+            <div class="badge">I</div>
+            <h3>Industri og grøn teknologi</h3>
+            <p>Produktion, IP og forsyningskæder i en branche med hurtig vækst.</p>
+            <div class="threats"><span>Ransomware</span><span>OT</span><span>IP-tyveri</span><span>Leverandørangreb</span></div>
+          </div>
+          <div class="ind reveal">
+            <div class="badge">S</div>
+            <h3>IT og software</h3>
+            <p>Når jeres kode og adgange er jeres kunders forsyningskæde.</p>
+            <div class="threats"><span>Forsyningskæde</span><span>Lækket kode</span><span>Credentials</span></div>
+          </div>
+          <div class="ind dark reveal">
+            <div class="badge red">K</div>
+            <h3>Koncernoverblik</h3>
+            <p>Samlet ledelsesleverance på tværs af selskaber og brancher – til koncernledelse og bestyrelse.</p>
+            <div class="threats"><span>Ledelsesresumé</span><span>Tværgående risici</span></div>
+          </div>
+          <div class="ind white reveal">
+            <div class="badge dark">+</div>
+            <h3>Senere udvidelse</h3>
+            <p>Finans, sundhed og kommuner – når efterspørgslen dokumenterer behovet.</p>
+            <div class="threats"><span>Finans</span><span>Sundhed</span><span>Kommuner</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REPORT ============ -->
+    <section class="section" id="rapport">
+      <span class="section-num">05</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kerneproduktet</span>
+          <h2>Den månedlige rapport: fra trusselsdata til beslutninger på 15 minutter</h2>
+          <p>Konklusionen først, detaljerne bagefter. Skrevet af analytikere, mærket med TLP og kildevurdering – så den kan bruges direkte af direktion og bestyrelse.</p>
+        </div>
+        <div class="report-wrap">
+          <div class="report-big reveal">
+            <h3>Trusselsbillede: Energi og forsyning</h3>
+            <div class="sub">Danmark · November 2026 · <span class="tlp">TLP:AMBER</span></div>
+            <div class="cat-title" style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#cdbfd6;margin:28px 0 4px">TRUSSELSNIVEAU PR. KATEGORI</div>
+            <div class="bar-row"><span>Ransomware</span><div class="bar"><i data-w="78"></i></div></div>
+            <div class="bar-row"><span>Hacktivisme / DDoS</span><div class="bar"><i data-w="58"></i></div></div>
+            <div class="bar-row"><span>Spionage</span><div class="bar"><i class="red" data-w="90"></i></div></div>
+            <div class="bar-row"><span>Svindel / phishing</span><div class="bar"><i class="lav" data-w="44"></i></div></div>
+            <p class="note">Illustrativ mock-up</p>
+            <div class="qc qc-red"></div>
+          </div>
+          <div class="report-sections">
+            <div class="rs reveal"><div class="badge">1</div><h4>Ledelsesresumé</h4><p>Én side til direktion og bestyrelse: hvad har ændret sig, og hvad skal vi gøre?</p></div>
+            <div class="rs reveal"><div class="badge">2</div><h4>Trusselsaktører og kampagner</h4><p>Hvem angriber branchen i Norden, og hvordan (MITRE ATT&amp;CK)?</p></div>
+            <div class="rs reveal"><div class="badge">3</div><h4>Ransomware og lækager</h4><p>Ofre i branchen, nye grupper og ramte leverandører.</p></div>
+            <div class="rs reveal"><div class="badge">4</div><h4>Prioriterede sårbarheder</h4><p>Aktivt udnyttede CVE'er i branchens typiske teknologier.</p></div>
+            <div class="rs reveal"><div class="badge">5</div><h4>Geopolitik og regulering</h4><p>Udvikling i trusselsbilledet samt NIS2-anbefalinger.</p></div>
+            <div class="rs reveal"><div class="badge red">6</div><h4>Jeres eksponering (Pro+)</h4><p>Lækkede credentials, nye domæner og omtale af jer.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPARISON ============ -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Hvorfor NorSignal</span>
+          <h2>Et tydeligt hul i markedet for lokal, branchespecifik CTI</h2>
+          <p>Ingen aktør kombinerer i dag lokal, branchespecifik analyse med en pris, som mellemstore virksomheder kan betale.</p>
+        </div>
+        <div class="table-scroll reveal">
+          <table class="compare">
+            <thead>
+              <tr><th>Kategori</th><th>Pris</th><th>Branchefokus</th><th>Lokalt sprog</th><th>Analytikerstøtte</th><th>Vurdering</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Globale enterprise-platforme</td><td>Høj</td><td><span class="dots" data-n="2"></span></td><td><span class="dots" data-n="1"></span></td><td><span class="dots" data-n="4"></span></td><td>Stærke data, men dyrt og kræver CTI-team</td></tr>
+              <tr><td>Selvbetjente CTI-værktøjer</td><td>Middel</td><td><span class="dots" data-n="2"></span></td><td><span class="dots" data-n="1"></span></td><td><span class="dots" data-n="2"></span></td><td>Selvbetjening, generisk indhold</td></tr>
+              <tr><td>Nordiske MSSP'er</td><td>Høj</td><td><span class="dots" data-n="3"></span></td><td><span class="dots" data-n="4"></span></td><td><span class="dots" data-n="3"></span></td><td>Lokal tillid; CTI er et biprodukt</td></tr>
+              <tr class="us"><td>NorSignal</td><td>Mid-market</td><td><span class="dots" data-n="5"></span></td><td><span class="dots" data-n="5"></span></td><td><span class="dots" data-n="4"></span></td><td>Bedste samlede pakke for mid-market</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="priser" style="background:#fff">
+      <span class="section-num">06</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Priser</span>
+          <h2>Én årlig licens i tre niveauer</h2>
+          <p>Enterprise-kvalitet til mid-market-pris. Alle priser er pr. år ekskl. moms. Licensen kan løbende opgraderes, når behovet vokser.</p>
+        </div>
+        <div class="price-grid">
+          <div class="price reveal">
+            <span class="eyebrow">Essential</span>
+            <div class="amount">95.000 kr.</div>
+            <div class="per">pr. år ekskl. moms</div>
+            <p class="desc">Branchens trusselsbillede og en fast månedlig rapport.</p>
+            <ul class="ticks">
+              <li>1 branchedashboard</li>
+              <li>Månedlig rapport og kritiske alerts</li>
+              <li>Adgang til app og portal</li>
+              <li>Op til 3 brugere</li>
+            </ul>
+            <a href="#demo" class="btn btn-ghost" data-plan="Essential">Vælg Essential</a>
+          </div>
+          <div class="price featured reveal">
+            <span class="tag">MEST VALGT</span>
+            <span class="eyebrow light">Professional</span>
+            <div class="amount">245.000 kr.</div>
+            <div class="per">pr. år ekskl. moms</div>
+            <p class="desc">Alt i Essential – plus overvågning af jeres egen eksponering.</p>
+            <ul class="ticks">
+              <li>Alt i Essential</li>
+              <li>Overvågning af egen eksponering</li>
+              <li>API og STIX/TAXII til SIEM</li>
+              <li>Op til 10 brugere</li>
+            </ul>
+            <a href="#demo" class="btn btn-red" data-plan="Professional">Vælg Professional</a>
+          </div>
+          <div class="price reveal">
+            <span class="eyebrow">Enterprise</span>
+            <div class="amount">fra 495.000 kr.</div>
+            <div class="per">pr. år ekskl. moms</div>
+            <p class="desc">Jeres egen analytiker og leverancer til bestyrelsen.</p>
+            <ul class="ticks">
+              <li>Alt i Professional</li>
+              <li>Navngiven analytikerkontakt</li>
+              <li>12 RFI'er pr. år</li>
+              <li>Bestyrelsesbriefing</li>
+            </ul>
+            <a href="#demo" class="btn btn-ghost" data-plan="Enterprise">Kontakt os</a>
+          </div>
+        </div>
+        <div class="addons reveal">
+          <b>Tilvalg:</b>
+          <span><span class="dot"></span>&nbsp; Ekstra brancher</span>
+          <span><span class="dot"></span>&nbsp; Tabletop-øvelser</span>
+          <span><span class="dot"></span>&nbsp; IR-retainer</span>
+          <span><span class="dot"></span>&nbsp; Køb via jeres MSSP-partner</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHT ============ -->
+    <section class="section" id="indsigt">
+      <span class="section-num">07</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Indsigt</span>
+          <h2>Ekspertise, I kan bruge – også før I er kunde</h2>
+          <p>Kvartalsvise trusselsbilleder, NIS2-guides og analyser fra vores branche-desks.</p>
+        </div>
+        <div class="insight-grid">
+          <a class="post reveal" href="#indsigt">
+            <div class="post-cover dark">
+              <svg><use href="#signal" /></svg>
+              <span class="eyebrow">Trusselsbillede Danmark</span>
+              <h4>Q4 2026</h4>
+            </div>
+            <div class="post-body">
+              <span class="meta">Rapport · 24 sider · <span class="tlp clear">TLP:CLEAR</span></span>
+              <h3>Ransomware er fortsat den største trussel mod produktion og transport</h3>
+              <p>Vores analytikere vurderer udviklingen i ransomware, hacktivistiske DDoS-angreb og leverandørkæden som indgang.</p>
+              <span class="more">Download rapporten →</span>
+            </div>
+          </a>
+          <a class="post reveal" href="#indsigt">
+            <div class="post-cover lav">
+              <span class="eyebrow">NIS2 · Ledelsesansvar</span>
+              <h4>Tre spørgsmål til bestyrelsen</h4>
+            </div>
+            <div class="post-body">
+              <span class="meta">Guide · 6 min. læsning</span>
+              <h3>Hvad bestyrelsen bør spørge om jeres trusselsbillede</h3>
+              <p>Hvilke aktører er aktive i vores branche? Hvilke systemer er mest udsatte? Hvordan udvikler truslen sig det kommende kvartal?</p>
+              <span class="more">Læs guiden →</span>
+            </div>
+          </a>
+          <a class="post reveal" href="#indsigt">
+            <div class="post-cover pet">
+              <span class="eyebrow">Bag analysen</span>
+              <h4>Admiralty-skalaen</h4>
+            </div>
+            <div class="post-body">
+              <span class="meta">Metode · 4 min. læsning</span>
+              <h3>Sådan vurderer vi kilder og sandsynlighed</h3>
+              <p>Hvorfor hver vurdering hos NorSignal får en kildebedømmelse fra A1 til F6 – og hvad det betyder for jeres beslutninger.</p>
+              <span class="more">Læs artiklen →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="download reveal">
+          <div>
+            <span class="eyebrow">Gratis rapport</span>
+            <h3>Trusselsbillede Danmark · Q4 2026</h3>
+            <p>Prioriterede anbefalinger til ledelsen, som kan indgå i jeres NIS2-dokumentation.</p>
+          </div>
+          <div>
+            <form class="inline-form" id="download-form">
+              <input type="email" placeholder="Arbejdsmail" required aria-label="Arbejdsmail" />
+              <button class="btn btn-dark" type="submit">Send mig rapporten</button>
+            </form>
+            <p class="form-note" id="download-note">Vi sender rapporten og vores månedlige nyhedsbrev. Afmeld når som helst.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="om-os" style="background:#fff">
+      <span class="section-num">08</span>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Om os</span>
+          <h2>Signalet, der skærer igennem støjen</h2>
+          <p>«Nor» for Norden og Norlys. «Signal» for indsigten, der skærer igennem støjen. NorSignal er stiftet i 2026 som datterselskab af Norlys og går i drift i januar 2027.</p>
+        </div>
+        <div class="mv">
+          <blockquote class="reveal">
+            <span class="eyebrow red">Mission</span>
+            <p>At give nordiske virksomheder et præcist, branchespecifikt trusselsbillede på deres eget sprog, så ledelsen kan træffe velfunderede sikkerhedsbeslutninger.</p>
+          </blockquote>
+          <blockquote class="pet reveal">
+            <span class="eyebrow">Vision</span>
+            <p>At være den foretrukne leverandør af cyber threat intelligence til mellemstore organisationer i Norden.</p>
+          </blockquote>
+        </div>
+        <div class="team">
+          <div class="member reveal"><div class="badge">CE</div><h4>CEO</h4><span class="role">Kommerciel leder</span><p>Strategi, strategiske kunder og kapitalrejsning.</p></div>
+          <div class="member reveal"><div class="badge">CT</div><h4>CTO</h4><span class="role">Platform og data</span><p>Platform, dataintegration og AI-berigelse.</p></div>
+          <div class="member reveal"><div class="badge">HI</div><h4>Head of Intelligence</h4><span class="role">Analyse og kvalitet</span><p>Kvalitetssikring og koncernoverblik.</p></div>
+          <div class="member reveal"><div class="badge">CA</div><h4>CTI-analytikere</h4><span class="role">Branche-desks</span><p>Energi og industri samt tele.</p></div>
+          <div class="member dark reveal"><div class="badge red">S</div><h4>Salg</h4><span class="role">Fra første driftsdag</span><p>Rådgivning og nye aftaler i hele Danmark.</p></div>
+        </div>
+        <div class="norlys-band reveal">
+          <p><strong>Et Norlys-selskab.</strong> Vi samarbejder med CFCS, branche-ISAC'er, brancheforeninger og MSSP-partnere – og bygger på åbne standarder som OpenCTI, MISP og STIX/TAXII.</p>
+          <a href="#demo" class="btn btn-dark">Tal med os</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEMO ============ -->
+    <section class="section dark-section" id="demo">
+      <div class="container demo-grid">
+        <div class="reveal">
+          <span class="eyebrow light">Book en demo</span>
+          <h2>Se jeres branches trusselsbillede på 30 minutter</h2>
+          <p class="lead">En af vores analytikere viser dashboardet og gennemgår en aktuel rapport for jeres branche. Uforpligtende.</p>
+          <div class="demo-steps">
+            <div><b>1</b><p>Vi kontakter jer inden for én arbejdsdag og finder et tidspunkt.</p></div>
+            <div><b>2</b><p>Gratis branche-briefing med de vigtigste trusler for jer lige nu.</p></div>
+            <div><b>3</b><p>Mulighed for pilotforløb med referencer og NIS2-dokumentation.</p></div>
+          </div>
+        </div>
+        <div class="form-card reveal">
+          <form id="demo-form" novalidate>
+            <div class="form-grid">
+              <div><label for="f-name">Navn</label><input id="f-name" required autocomplete="name" /></div>
+              <div><label for="f-title">Titel</label><input id="f-title" placeholder="fx CISO eller IT-direktør" /></div>
+              <div><label for="f-company">Virksomhed</label><input id="f-company" required autocomplete="organization" /></div>
+              <div><label for="f-email">Arbejdsmail</label><input id="f-email" type="email" required autocomplete="email" /></div>
+              <div>
+                <label for="f-industry">Branche</label>
+                <select id="f-industry">
+                  <option>Energi og forsyning</option><option>Tele og digital infrastruktur</option>
+                  <option>Industri og grøn teknologi</option><option>IT og software</option><option>Andet</option>
+                </select>
+              </div>
+              <div>
+                <label for="f-size">Antal ansatte</label>
+                <select id="f-size"><option>Under 250</option><option selected>250-1.000</option><option>1.000-5.000</option><option>Over 5.000</option></select>
+              </div>
+              <div class="full">
+                <label for="f-plan">Interesseret i</label>
+                <select id="f-plan"><option>Ved ikke endnu</option><option>Essential</option><option>Professional</option><option>Enterprise</option></select>
+              </div>
+              <div class="full"><label for="f-msg">Hvad vil I gerne have svar på? (valgfrit)</label><textarea id="f-msg"></textarea></div>
+              <div class="full"><label class="check"><input type="checkbox" required /> Jeg accepterer, at NorSignal behandler mine oplysninger for at kontakte mig.</label></div>
+              <div class="full"><button class="btn btn-red" type="submit" style="width:100%;justify-content:center">Book en demo</button></div>
+            </div>
+          </form>
+          <div class="form-success" id="demo-success">
+            <svg width="56" height="56"><use href="#signal" /></svg>
+            <h3>Tak – vi har modtaget jeres forespørgsel</h3>
+            <p>En af vores analytikere kontakter jer inden for én arbejdsdag. I mellemtiden kan I se, hvordan app'en ser ud.</p>
+            <p style="margin-top:20px"><a class="btn btn-dark" href="../app/index.html">Se app'en</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="../assets/logo-wordmark-white.png" alt="NorSignal" />
+          <p>Branchespecifik cyber threat intelligence for nordiske virksomheder – på kundens eget sprog, til mid-market-pris.</p>
+        </div>
+        <div>
+          <h5>Løsninger</h5>
+          <ul><li><a href="#loesninger">Branchedashboard</a></li><li><a href="#rapport">Månedlig rapport</a></li><li><a href="#loesninger">Eksponering</a></li><li><a href="../app/index.html">App</a></li></ul>
+        </div>
+        <div>
+          <h5>Brancher</h5>
+          <ul><li><a href="#brancher">Energi og forsyning</a></li><li><a href="#brancher">Tele</a></li><li><a href="#brancher">Industri og grøn tek</a></li><li><a href="#brancher">IT og software</a></li></ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul><li><a href="mailto:kontakt@norsignal.dk">kontakt@norsignal.dk</a></li><li>Danmark</li><li><a href="#demo">Book en demo</a></li><li><a href="#">LinkedIn</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NorSignal ApS · Et Norlys-selskab</span>
+        <span class="mock-flag">Koncept-mock-up til universitetsprojekt · Fiktive data</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

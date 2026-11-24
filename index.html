@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorSignal · Koncept-mock-up</title>
+  <link rel="icon" type="image/png" href="assets/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --aubergine: #331e39;
+      --red: #eb0510;
+      --lavender: #d6c8e7;
+      --lavender-soft: #ede6f4;
+      --offwhite: #faf5f0;
+      --petrol: #297e90;
+      --muted: #6c5c70;
+      --font: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: var(--font);
+      background: var(--offwhite); color: var(--aubergine);
+      display: grid; place-items: center; padding: 32px 20px;
+      position: relative; overflow-x: hidden;
+    }
+    body::before, body::after { content: ""; position: fixed; z-index: 0; pointer-events: none; }
+    body::before { width: 320px; height: 320px; background: var(--lavender); border-bottom-right-radius: 100%; left: 0; top: 0; }
+    body::after { width: 220px; height: 220px; background: var(--red); border-top-left-radius: 100%; right: 0; bottom: 0; }
+    main { position: relative; z-index: 1; width: min(860px, 100%); }
+    .logo { height: 44px; width: auto; display: block; margin-bottom: 28px; }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--petrol); }
+    h1 { font-size: clamp(32px, 4.5vw, 48px); font-weight: 500; line-height: 1.12; margin: 12px 0 14px; letter-spacing: -0.01em; }
+    .lead { font-size: 17px; color: var(--muted); max-width: 620px; margin: 0 0 36px; line-height: 1.55; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card {
+      text-decoration: none; color: inherit; padding: 34px 30px; display: flex; flex-direction: column; gap: 12px;
+      background: #fff; border: 1px solid #e4dbe9; transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card.dark { background: var(--aubergine); color: #fff; border-color: var(--aubergine); }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(51, 30, 57, .4); }
+    .card h2 { margin: 0; font-size: 24px; font-weight: 500; }
+    .card p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--muted); flex: 1; }
+    .card.dark p { color: #d4c7db; }
+    .card .cta { margin-top: 16px; font-weight: 500; font-size: 15px; color: var(--red); }
+    .card.dark .cta { color: #fff; }
+    .badge { width: 34px; height: 34px; display: grid; place-items: center; background: var(--petrol); color: #fff; font-weight: 600; font-size: 13px; }
+    .card.dark .badge { background: var(--red); }
+    footer { margin-top: 28px; font-size: 13px; color: var(--muted); }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="assets/logo-wordmark.png" alt="NorSignal" />
+    <div class="eyebrow">Koncept-mock-up · Universitetsprojekt</div>
+    <h1>Hjemmeside og mobilapp for NorSignal</h1>
+    <p class="lead">Branchespecifik cyber threat intelligence for nordiske virksomheder – på kundens eget sprog, til mid-market-pris.</p>
+    <div class="grid">
+      <a class="card" href="website/index.html">
+        <span class="badge">01</span>
+        <h2>Hjemmeside</h2>
+        <p>Komplet marketing- og produktside med interaktiv portalforhåndsvisning, brancher, månedsrapport, priser og demo-booking.</p>
+        <span class="cta">Åbn hjemmesiden →</span>
+      </a>
+      <a class="card dark" href="app/index.html">
+        <span class="badge">02</span>
+        <h2>App-prototype</h2>
+        <p>Klikbar mobilapp i telefonramme med trusselsniveau, alerts, tjeklister, månedsrapport, eksponering, analytikerchat og push-notifikation.</p>
+        <span class="cta">Åbn app-prototypen →</span>
+      </a>
+    </div>
+    <footer>Et Norlys-selskab · Fiktive data til præsentationsbrug</footer>
+  </main>
+</body>
+</html>
